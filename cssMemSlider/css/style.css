@@ -10,7 +10,7 @@ body{
 }
 .slider__inner { 
     position: relative;
-	text-align: center;
+	/* text-align: center; */
     top: 10px;
 	width: 100%;
 	overflow: hidden;
@@ -63,6 +63,7 @@ input{
 }
 /*TEXT SLIDER*/
 .slider__inner .slides_text{ 
+	text-align: left;
 	width: 20%;
 	float: left;
 	font-size:20px;
@@ -71,11 +72,7 @@ input{
 .slider__inner .text{ 
 	width: 500%;
 	line-height: 0;
-}
-.text{
-	display: flex;
-    align-items: center;
-    align-content: center; 
+	display: flex; 
 	transition: all .9s ease-out;
 }
 #switch1:checked ~ .text{
@@ -90,9 +87,13 @@ input{
 #switch4:checked ~ .text{
 	margin-left: -300%;
 }
+.slider__inner  .text_mod2{
+	visibility: hidden;
+}
+
 /*LABEL*/
 .active{ 
-	text-align: center;
+	text-align: right;
 }
 .active label{ 
 	margin-top: 15px;
@@ -140,11 +141,21 @@ and (max-width: 767px){
 .slider{
 		max-width: 250px;
 }
+.slider__inner .text_mod1{
+	visibility: hidden;
+	margin: 0px;
+}
+.slider__inner  .text_mod2{
+	visibility: visible;
+}
 .slider__inner .slides_text{ 
 	font-size:10px;
 }
+.slides{
+	margin: 0px;
+}
 .active label{ 
-	margin-top: 8px;
+	margin-top: 5px;
 	border-radius: 8px; 
 	width: 8px;
 	height: 8px;
