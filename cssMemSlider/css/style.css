@@ -1,3 +1,9 @@
+*{
+	box-sizing: border-box;
+}
+body{
+	background-color:#e7ecef;
+}
 .slider{
 	margin: 0 auto;
 	max-width: 600px;
@@ -10,7 +16,10 @@
 	overflow: hidden;
 	margin: 0 auto;
 }
-
+/*IMAGE SLIDER*/
+.slides{
+	margin: 20px 0px;
+}
 .slider__inner .slides_img{ 
 	width: 20%;
 	float: left;
@@ -19,10 +28,24 @@
 	width: 500%;
 	line-height: 0;
 }
+.image{
+	display: flex;
+    align-items: center;
+    align-content: center;  
+}
+.slides_img {
+	display: flex;
+	flex-direction: column;
+	border-radius: 10px;
+}
 .slides_img img{ 
 	width: 100%;
+	aspect-ratio: 1 / 1;
+	border-radius: 10px;
 }
-
+.slides_img div{
+	margin-top: 20px;
+}
 input{ 
 	display: none;
 }
@@ -38,7 +61,36 @@ input{
 #switch4:checked ~ .slides .image{
 	margin-left: -300%;
 }
-
+/*TEXT SLIDER*/
+.slider__inner .slides_text{ 
+	width: 20%;
+	float: left;
+	font-size:20px;
+	color: #8b8c89;
+}
+.slider__inner .text{ 
+	width: 500%;
+	line-height: 0;
+}
+.text{
+	display: flex;
+    align-items: center;
+    align-content: center; 
+	transition: all .9s ease-out;
+}
+#switch1:checked ~ .text{
+	margin-left: 0;
+}
+#switch2:checked ~ .text{
+	margin-left: -100%;
+}
+#switch3:checked ~ .text{
+	margin-left: -200%;
+}
+#switch4:checked ~ .text{
+	margin-left: -300%;
+}
+/*LABEL*/
 .active{ 
 	text-align: center;
 }
@@ -49,27 +101,18 @@ input{
 	display: inline-block; 
 	width: 15px;
 	height: 15px;
-	background: #bbb;
+	background: #274c77;
 }
 .active label:hover{ 
-	background: #76c8ff;
-	border-color: #777 !important;
+	background: #6096ba;	
 }
-#switch1:checked ~ .active label:nth-child(1),
-#switch2:checked ~ .active label:nth-child(2),
-#switch3:checked ~ .active label:nth-child(3),
-#switch4:checked ~ .active label:nth-child(4),{
-	background: #18a3dd;
-	border-color: #18a3dd !important;
+.active label:active{
+	background: #a3cef1;
 }
+
 .slides .image{ 
-	transition: all .8s ;
+	transition: all .7s ease-out;
 }
-
-
-
-
-
 /*ADAPTIVE*/
 /*1280px <= width*/
 
@@ -78,7 +121,10 @@ input{
 and (min-width: 768px)
 and (max-width: 1279px){
 .slider{
-		max-width: 600px;
+		max-width: 500px;
+	}
+.slider__inner .slides_text{ 
+	font-size:16px;
 	}
 .active label{ 
 		margin-top: 10px;
@@ -94,6 +140,9 @@ and (max-width: 767px){
 .slider{
 		max-width: 250px;
 }
+.slider__inner .slides_text{ 
+	font-size:10px;
+}
 .active label{ 
 	margin-top: 8px;
 	border-radius: 8px; 
@@ -101,3 +150,13 @@ and (max-width: 767px){
 	height: 8px;
 }
 }
+
+
+
+
+
+
+
+
+
+
