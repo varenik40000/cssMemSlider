@@ -4,11 +4,11 @@
 body{
 	background-color:#e7ecef;
 	font-family: 'Roboto', 'Open Sans', sans-serif;
-	font-size: 24px;
+	font-size: 1.5rem;
 }
 .slider{
 	margin: 0 auto;
-	max-width: 600px;
+	max-width: 37.5rem;
 }
 .slider__inner { 
 	width: 100%;
@@ -17,7 +17,7 @@ body{
 }
 /*IMAGE SLIDER*/
 .slides{
-	margin: 20px 0px;
+	margin: 1.25rem 0;
 }
 .slider__inner .slides_img{ 
 	width: 20%;
@@ -35,15 +35,15 @@ body{
 .slides_img {
 	display: flex;
 	flex-direction: column;
-	border-radius: 10px;
+	border-radius: 0.6rem;
 }
 .slides_img img{ 
 	width: 100%;
 	aspect-ratio: 1 / 1;
-	border-radius: 10px;
+	border-radius: 0.6rem;
 }
 .slides_img div{
-	margin-top: 20px;
+	margin-top: 1.25rem;
 }
 input{ 
 	display: none;
@@ -107,10 +107,10 @@ input{
 /*LABEL*/
 .active label{ 
 	cursor: pointer;
-	border-radius: 15px; 
+	border-radius: 0.9rem; 
 	display: inline-block; 
-	width: 15px;
-	height: 15px;
+	width: 0.9rem;
+	height: 0.9rem;
 	background: #274c77;
 }
 .active label:hover{ 
@@ -129,10 +129,10 @@ input{
 and (min-width: 768px)
 and (max-width: 1279px){
 body{
-	font-size: 20px;
+	font-size: 1.25rem;
 	}
 .slider{
-	max-width: 500px;
+	max-width: 31.5rem;
 	}
 }
 /*320px <= width < 768px*/
@@ -140,13 +140,13 @@ body{
 and (min-width: 320px)
 and (max-width: 767px){
 body{
-	font-size: 16px;
+	font-size: 1rem;
 	}
 .slider{
-	max-width: 250px;		
+	max-width: 16rem;		
 }
 .slider_footer{
-	height: 40px;
+	height: 2.5rem;
 	display: flex;
 	flex-direction: column-reverse;
 	justify-content: space-between;
