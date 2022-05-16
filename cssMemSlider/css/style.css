@@ -9,9 +9,6 @@ body{
 	max-width: 600px;
 }
 .slider__inner { 
-    position: relative;
-	/* text-align: center; */
-    top: 10px;
 	width: 100%;
 	overflow: hidden;
 	margin: 0 auto;
@@ -22,7 +19,7 @@ body{
 }
 .slider__inner .slides_img{ 
 	width: 20%;
-	float: left;
+	display: flex;
 }
 .slider__inner .image{ 
 	width: 500%;
@@ -49,23 +46,26 @@ body{
 input{ 
 	display: none;
 }
-#switch1:checked ~ .slides .image{
+#switch0:checked ~ .slides .image{
 	margin-left: 0;
 }
-#switch2:checked ~ .slides .image{
+#switch1:checked ~ .slides .image{
 	margin-left: -100%;
 }
-#switch3:checked ~ .slides .image{
+#switch2:checked ~ .slides .image{
 	margin-left: -200%;
 }
-#switch4:checked ~ .slides .image{
+#switch3:checked ~ .slides .image{
 	margin-left: -300%;
+}
+#switch4:checked ~ .slides .image{
+	margin-left: -400%;
 }
 /*TEXT SLIDER*/
 .slider__inner .slides_text{ 
 	text-align: left;
 	width: 20%;
-	float: left;
+	display: flex;
 	font-size:20px;
 	color: #8b8c89;
 }
@@ -75,18 +75,22 @@ input{
 	display: flex; 
 	transition: all .9s ease-out;
 }
-#switch1:checked ~ .text{
+#switch0:checked ~ .text{
 	margin-left: 0;
 }
-#switch2:checked ~ .text{
+#switch1:checked ~ .text{
 	margin-left: -100%;
 }
-#switch3:checked ~ .text{
+#switch2:checked ~ .text{
 	margin-left: -200%;
 }
-#switch4:checked ~ .text{
+#switch3:checked ~ .text{
 	margin-left: -300%;
 }
+#switch4:checked ~ .text{
+	margin-left: -400%;
+}
+
 .slider__inner  .text_mod2{
 	visibility: hidden;
 }
@@ -94,6 +98,7 @@ input{
 /*LABEL*/
 .active{ 
 	text-align: right;
+
 }
 .active label{ 
 	margin-top: 15px;
@@ -140,13 +145,16 @@ and (min-width: 320px)
 and (max-width: 767px){
 .slider{
 		max-width: 250px;
+		
 }
 .slider__inner .text_mod1{
 	visibility: hidden;
 	margin: 0px;
 }
 .slider__inner  .text_mod2{
+	height: 20px;
 	visibility: visible;
+	margin: 0px
 }
 .slider__inner .slides_text{ 
 	font-size:10px;
@@ -155,10 +163,10 @@ and (max-width: 767px){
 	margin: 0px;
 }
 .active label{ 
-	margin-top: 5px;
-	border-radius: 8px; 
-	width: 8px;
-	height: 8px;
+	margin: 5px 0px;
+	border-radius: 15px; 
+	width: 15px;
+	height: 15px;
 }
 }
 
