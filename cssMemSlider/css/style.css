@@ -146,9 +146,14 @@ body{
 	max-width: 250px;		
 }
 .slider_footer{
+	height: 40px;
 	display: flex;
 	flex-direction: column-reverse;
+	justify-content: space-between;
  }
+ .subtitles{
+    width: 100%;
+}
  .active{
 	 text-align: center;
  }
